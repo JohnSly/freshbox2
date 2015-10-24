@@ -1,0 +1,82 @@
+<!doctype html>
+<!--[if lt IE 7 ]> <html class="ie ie6" lang="<%= I18n.locale %>"> <![endif]-->
+<!--[if IE 7 ]>    <html class="ie ie7" lang="<%= I18n.locale %>"> <![endif]-->
+<!--[if IE 8 ]>    <html class="ie ie8" lang="<%= I18n.locale %>"> <![endif]-->
+<!--[if IE 9 ]>    <html class="ie ie9" lang="<%= I18n.locale %>"> <![endif]-->
+<!--[if gt IE 9]><!--><html lang="<%= I18n.locale %>"><!--<![endif]-->
+  <head data-hook="inside_head">
+    <%= render partial: 'spree/shared/head' %>
+  </head>
+  <body id="bodylanding" class="<%= body_class %>" id="<%= @body_id || 'default' %>" data-hook="body">
+    <%= render partial: 'spree/shared/google_analytics.js' %>
+
+    <div id="spree-header">
+      <header class="navbar navbar-default navbar-fixed-top" id="header" data-hook>
+        <div class = "container">
+          <div class="container">
+            <div class="row">
+              <figure id="logo" class="col-md-4" data-hook>
+                <%= logo %>
+              </figure>
+              <ul class="nav navbar-nav navbar-right">
+                <li><%= link_to "About", products_url %></li>
+                <li><%= link_to "Contact Us", products_url %></li>
+              </ul>
+            </div>
+          </div>
+      </div>
+      </header>
+
+    </div>
+
+    <div class=".container">
+      <div class="row">
+
+        <div class="col-md-12">
+
+        </div>
+      </div>
+      <!-- <a href="#howitworks"><span id="glylanding" class="glyphicon glyphicon-chevron-down" style="text-align: center;" aria-hidden="true"></span></a> -->
+
+      <div id="howitworks" class="row">
+
+          <h1><b>How it works</b></h1>
+        <div  class="col-md-4">
+          <%= link_to image_tag("selection.png"), products_path %>
+
+          <p class="maintext"><b>You choose</p>
+          <p class="moretext">From the comfort<br>of your home</p>
+
+        </div>
+
+        <div class="col-md-4">
+          <%= link_to image_tag("trolley.png"), products_path %>
+
+          <p class="maintext"><b>We go shop</p>
+          <p class="moretext">So you can skip the stress<br> of the trip to the suupermarket</p>
+        </div>
+
+        <div class="col-md-4">
+          <%= link_to image_tag("bikeguy.png"), products_path %>
+
+          <p class="maintext"><b>We deliver right</p>
+          <p class="moretext">So you dont que<br> at the mall and in traffic</p>
+
+        </div>
+
+      </div>
+      <div id="about" class="row"></div>
+      <div id="contact_form" class="row"></div>
+      <div id="footer" class="row">
+        <div id="foot" class="col-md-12">
+            <p><center><a href="#">info@freshbox.co.ke </a> <p class="footertext">Copyright 2015</p></center></p>
+        </div>
+
+      </div>
+
+    </div>
+
+
+
+  </body>
+</html>

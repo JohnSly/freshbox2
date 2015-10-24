@@ -1,0 +1,28 @@
+# postgresql
+#   gem install pg
+#
+#   Ensure the postgresql gem is defined in your Gemfile
+#   gem 'pg'
+#
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
+  password: <%= ENV['FRESHBOX_DATABASE_PASSWORD'] %>
+  username: freshbox
+  host: localhost
+
+development:
+  <<: *default
+  database: freshbox_development
+
+# Warning: The database defined as "test" will be erased and
+# re-generated from your development database when you run "rake".
+# Do not set this db to the same as development or production.
+test:
+  <<: *default
+  database: freshbox_test
+
+production:
+  <<: *default
+  database: freshbox_production
