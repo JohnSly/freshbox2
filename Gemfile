@@ -56,4 +56,8 @@ gem 'spree_quick_view', github: 'ronzalo/spree_quick_view'
 gem 'spree_social', github: 'spree-contrib/spree_social', branch: '3-0-stable'
 
 
+group :production do
+ gem 'therubyracer'
+end
+
 ruby "2.2.2"
