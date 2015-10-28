@@ -60,4 +60,12 @@ group :production do
  gem 'therubyracer'
 end
 
+# gem 'capistrano',  '~> 3.0.0'
+# gem 'capistrano-rails'
+# gem 'rvm-capistrano'
+
+group :development do
+  gem 'capistrano-rails'
+end
+
 ruby "2.2.2"
