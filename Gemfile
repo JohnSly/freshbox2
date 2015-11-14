@@ -67,5 +67,3 @@ end
 group :development do
   gem 'capistrano-rails'
 end
-
-ruby "2.2.2"
